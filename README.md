@@ -47,13 +47,13 @@ Validates and uploads media files to S3 with type checking and logging.
 
 Monitors EC2 instances and reboots failed ones based on status checks and CloudWatch metrics.
 
-# Slack Notification Script
+## Slack Notification Script
 `sh-slack-notifications`
 
 Simple Bash script to send notifications to Slack via webhook.
 
 
-# Playlist Generator
+## Playlist Generator
 `sh-generate-m3u-playlist`
 
 Creates M3U playlists from audio files in a directory.
