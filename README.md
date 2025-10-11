@@ -52,6 +52,10 @@ Monitors EC2 instances and reboots failed ones based on status checks and CloudW
 
 Simple Bash script to send notifications to Slack via webhook.
 
+## Simple Rsync Script
+`sh-simple-rsync`
+
+A simple Bash script for backing up data.
 
 ## Playlist Generator
 `sh-generate-m3u-playlist`
