@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # === CONFIGURATION ===
-SRC="/home/yaroslav/"
-DEST="/run/media/yaroslav/Seagate/BACKUP/"
-SNAPSHOT_DIR="/run/media/yaroslav/Seagate/BACKUP/old_versions"
-LOGFILE="rsync-backup.log"
+SRC="/home/my-username/"
+DEST="/run/media/my-username/Seagate/BACKUP-home-my-username/"
+SNAPSHOT_DIR="/run/media/my-username/Seagate/BACKUP-home-my-username/old_versions"
+TODAY=$(date +%F)
+LOGFILE="rsync-backup-$TODAY.log"
 
 # === CHECK IF MOUNTED ===
 if ! mountpoint -q "$(dirname "$DEST")"; then
@@ -13,7 +14,6 @@ if ! mountpoint -q "$(dirname "$DEST")"; then
 fi
 
 # === CREATE SNAPSHOT DIR ===
-TODAY=$(date +%F)
 BACKUP_DIR="$SNAPSHOT_DIR/$TODAY"
 mkdir -p "$BACKUP_DIR"
 
@@ -21,6 +21,7 @@ mkdir -p "$BACKUP_DIR"
 rsync -avh --delete \
   --backup --backup-dir="$BACKUP_DIR" \
   --exclude='.cache/' \
+  --exclude='old_versions' \
   --exclude='Downloads/' \
    --exclude='VirtualBox VMs/' \
   "$SRC" "$DEST" >> "$LOGFILE" 2>&1
