@@ -36,7 +36,7 @@ def get_jenkins_worker_instances(region=None):
 
 def lambda_handler(event, context):
     region = os.environ.get('AWS_REGION')
-    time_running_threshold_seconds = os.environ.get('TIME_RUNNING_THRESHOLD_SECONDS', '10800') # Default to 3 hours
+    time_running_threshold_seconds = int(os.environ.get('TIME_RUNNING_THRESHOLD_SECONDS', '10800')) # Default to 3 hours
     try:
         instances = get_jenkins_worker_instances(region)
         logging.info('Found %d instances', len(instances))
