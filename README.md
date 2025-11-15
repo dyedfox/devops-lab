@@ -13,6 +13,18 @@ AWS Lambda function that extracts technical metadata from uploaded media files u
 
 This AWS Lambda function retrieves an authentication token from Amazon Elastic Container Registry (ECR) and updates registry authentication via a GraphQL mutation.
 
+## Lambda Function for Terminating Orphaned Jenkins Worker Instances
+`py-lambda-orphaned-instances-cleanup`
+
+This AWS Lambda function scans for running EC2 instances based on predefined Name tags and automatically terminates those that have been running longer than the configured threshold (set via the `TIME_RUNNING_THRESHOLD_SECONDS` environment variable), preventing idle or orphaned instances from accumulating.
+That was a response to the Jenkins EC2 plugin losing control over its instances.
+
+### Variables
+```bash
+INSTANCE_NAMES = "jenkins-worker, jenkins-small-worker"
+TIME_RUNNING_THRESHOLD_SECONDS = 14400
+```
+
 ## ASG Management Script
 `sh-asg-start-stop`
 
