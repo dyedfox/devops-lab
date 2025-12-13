@@ -27,7 +27,7 @@ $docker_context\
 $time\
 [ ](fg:#33658A)\
 [❱](fg:#9A348E) $cmd_duration[🏁](fg:#06969A)\
-\n ⚡[❱](fg:#06969A)
+\n ⚡[❱] (fg:#06969A)
 """
 
 # Disable the blank line at the start of the prompt
