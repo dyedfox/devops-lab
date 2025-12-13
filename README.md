@@ -3,6 +3,25 @@ A collection of useful scripts and tools for DevOps workflows, built from years 
 
 For each item, see the dedicated README.md inside its directory  (some still need to be added).
 
+## Startship Prompt
+Let's call it Yaro :-) 
+
+![image](starship-preset/screenshot-linux.png)
+
+Get the Starship here: https://starship.rs/
+
+### Installation
+
+**! Please make sure to back up your current preset in case you want to revert.**
+```bash
+cp ~/.config/starship.toml ~/.config/starship.toml.bak
+```
+
+Install the preset
+```bash
+curl https://raw.githubusercontent.com/dyedfox/devops-lab/main/starship-preset/starship.toml -o ~/.config/starship.toml
+```
+
 ## MediaInfo Lambda Function
 `py-lambda-mediainfo-handler`
 
