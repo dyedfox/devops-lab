@@ -4,7 +4,7 @@ A collection of useful scripts and tools for DevOps workflows, built from years 
 For each item, see the dedicated README.md inside its directory  (some still need to be added).
 
 ## Startship Prompt
-Let's call it Yaro :-) 
+Let's call it Yaro 😀
 
 ![image](starship-preset/screenshot-linux.png)
 
