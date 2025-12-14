@@ -8,6 +8,9 @@ Let's call it Yaro 😀
 
 ![image](starship-preset/screenshot-linux.png)
 
+
+![image](starship-preset/screenshot-macos.png)
+
 Get the Starship here: https://starship.rs/
 
 ### Installation
