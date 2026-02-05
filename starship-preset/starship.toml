@@ -155,9 +155,22 @@ python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
 
+[kubernetes]
+disabled = true
+symbol = "⎈"
+style = "fg:#fcfcfc bg:#06969A"
+format = '[ $symbol $context\($namespace\) ]($style)'
+
+[[kubernetes.contexts]]
+context_pattern = ".*(?P<short>.{17})$"
+context_alias = "…$short"
+
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+#time_format = "%R" # Hour:Minute Format
+#time_format = "%D %R" # Date mm/dd/yy Hour:Minute Format
+#time_format = "%d.%m.%y %R" # Date dd.mm.yy Hour:Minute Format
+time_format = "%b %d %R" # Date Jun 21 Hour:Minute Format
 style = "bg:#33658A"
 format = '[   $time ]($style)'
 
