@@ -165,7 +165,7 @@ format = '[ $symbol $context\($namespace\) ]($style)'
 [aws]
 format = '[ $symbol($profile )(\($region\) )]($style)'
 style = "fg:#fcfcfc bg:#06969A"
-symbol = "☁ "
+symbol = "☁️ "
 
 [[kubernetes.contexts]]
 context_pattern = ".*(?P<short>.{17})$"
