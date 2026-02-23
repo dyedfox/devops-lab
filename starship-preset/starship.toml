@@ -23,6 +23,7 @@ $scala\
 $python\
 [](fg:#86bbd8 bg:#06969A)\
 $docker_context\
+$aws\
 [](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
@@ -160,6 +161,11 @@ disabled = true
 symbol = "⎈"
 style = "fg:#fcfcfc bg:#06969A"
 format = '[ $symbol $context\($namespace\) ]($style)'
+
+[aws]
+format = '[ $symbol($profile )(\($region\) )]($style)'
+style = "fg:#fcfcfc bg:#06969A"
+symbol = "☁ "
 
 [[kubernetes.contexts]]
 context_pattern = ".*(?P<short>.{17})$"
