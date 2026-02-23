@@ -163,7 +163,7 @@ style = "fg:#fcfcfc bg:#06969A"
 format = '[ $symbol $context\($namespace\) ]($style)'
 
 [aws]
-format = '[ $symbol($profile )(\($region\) )]($style)'
+format = '[ $symbol ($profile )(\($region\) )]($style)'
 style = "fg:#fcfcfc bg:#06969A"
 symbol = " "
 
